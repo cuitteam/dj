@@ -1,3 +1,7 @@
+{% extends 'polls/base.html' %}
+{#{% load staticfiles %}#}
+
+{% block content %}
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
@@ -8,3 +12,5 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+    <p><button type="button" class="btn btn-lg btn-primary">Primary</button> </p>
+{% endblock %}
